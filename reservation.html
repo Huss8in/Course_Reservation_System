@@ -21,15 +21,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Booked Courses</a>
+                    <a class="nav-link" href="#">Courses</a>
                 </li>
                 <li class="nav-item">
-                    <!-- <a class="nav-link" href="#">Contact</a> -->
+                    <a class="nav-link" href="#">Bookings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
                 </li>
             </ul>
+        </div>
         </div>
     </nav>
 
@@ -49,48 +53,64 @@
         <!-- Courses Container -->
         <div class="row" id="coursesContainer">
             <div class="col-md-4">
+                <a href="booking.html?course=Data%20Analyst&description=Collect,%20organize,%20and%20transform%20data%20to%20make%20informed%20decisions.&price=$100.00"></a>
                 <div class="course-row">
+                    <img src="download.jpeg" alt="Data Analyst" class="course-image">
                     <h5>Data Analyst</h5>
                     <p>Collect, organize, and transform data to make informed decisions.</p>
+                    <div class="course-rating">Rating: <span class="stars">★★★★☆</span> 4.5/5</div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="course-row">
+                    <img src="download.jpeg" alt="Project Manager" class="course-image">
                     <h5>Project Manager</h5>
                     <p>Oversee the planning and execution of projects to ensure they’re successful.</p>
+                    <div class="course-rating">Rating: <span class="stars">★★★☆☆</span> 3/5</div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="course-row">
+                    <img src="download.jpeg" alt="Cybersecurity Professional" class="course-image">
                     <h5>Cybersecurity Professional</h5>
                     <p>Develop strategies to protect organizations from cyber-attacks and disruptions.</p>
+                    <div class="course-rating">Rating: <span class="stars">★★★★★</span> 5/5</div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="course-row">
+                    <img src="download.jpeg" alt="UX Designer" class="course-image">
                     <h5>UX Designer</h5>
                     <p>Make digital and physical products easier and more enjoyable to use.</p>
+                    <div class="course-rating">Rating: <span class="stars">★★★★☆</span> 4.5/5</div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="course-row">
+                    <img src="download.jpeg" alt="IT Support Specialist" class="course-image">
                     <h5>IT Support Specialist</h5>
                     <p>Evaluate and troubleshoot technology issues so equipment runs smoothly.</p>
+                    <div class="course-rating">Rating: <span class="stars">★★★★☆</span> 4.5/5</div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="course-row">
+                    <img src="download.jpeg" alt="Digital Marketer" class="course-image">
                     <h5>Digital Marketer</h5>
                     <p>Define and develop digital strategies to deliver business growth through online channels.</p>
+                    <div class="course-rating">Rating: <span class="stars">★★★☆☆</span> 3/5</div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="course-row">
+                    <img src="download.jpeg" alt="Data Scientist" class="course-image">
                     <h5>Data Scientist</h5>
                     <p>Extract and analyze data to make informed business decisions.</p>
+                    <div class="course-rating">Rating: <span class="stars">★★★★★</span> 5/5</div>
                 </div>
             </div>
         </div>
+
     </div>
 
     <script>
@@ -106,8 +126,18 @@
                 }
             });
         }
+
+        
     </script>
 
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Course Reservation. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
