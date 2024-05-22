@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Reservation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap">
+    <link rel="stylesheet" href="reservation.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Course Reservation</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="container course-container">
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="searchBar" placeholder="Search courses by name">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" onclick="searchCourses()">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Courses Container -->
+        <div class="row" id="coursesContainer">
+            <div class="col-md-4">
+                <div class="course-row">
+                    <h5>Data Analyst</h5>
+                    <p>Collect, organize, and transform data to make informed decisions.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course-row">
+                    <h5>Project Manager</h5>
+                    <p>Oversee the planning and execution of projects to ensure they’re successful.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course-row">
+                    <h5>Cybersecurity Professional</h5>
+                    <p>Develop strategies to protect organizations from cyber-attacks and disruptions.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course-row">
+                    <h5>UX Designer</h5>
+                    <p>Make digital and physical products easier and more enjoyable to use.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course-row">
+                    <h5>IT Support Specialist</h5>
+                    <p>Evaluate and troubleshoot technology issues so equipment runs smoothly.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course-row">
+                    <h5>Digital Marketer</h5>
+                    <p>Define and develop digital strategies to deliver business growth through online channels.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course-row">
+                    <h5>Data Scientist</h5>
+                    <p>Extract and analyze data to make informed business decisions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function searchCourses() {
+            const searchValue = document.getElementById('searchBar').value.toLowerCase();
+            const courses = document.querySelectorAll('.course-row');
+            courses.forEach(course => {
+                const courseName = course.querySelector('h5').textContent.toLowerCase();
+                if (courseName.includes(searchValue)) {
+                    course.parentElement.style.display = '';
+                } else {
+                    course.parentElement.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
