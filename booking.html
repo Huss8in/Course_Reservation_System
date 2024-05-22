@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Booking</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap">
+    <link rel="stylesheet" href="booking.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Course Reservation</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="reservation.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Booked Courses</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Booking Container -->
+    <div class="container booking-container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="course-details">
+                    <h2 id="courseTitle">Course Title</h2>
+                    <p id="courseDescription">Course Description</p>
+                    <p><strong>Price: </strong><span id="coursePrice">$0.00</span></p>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="courseTime">Choose a time to begin:</label>
+                        <input type="datetime-local" class="form-control" id="courseTime">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Simulated course data
+            const course = {
+                title: "Data Scientist",
+                description: "Extract and analyze data to make informed business decisions.",
+                price: "$200.00"
+            };
+
+            document.getElementById('courseTitle').textContent = course.title;
+            document.getElementById('courseDescription').textContent = course.description;
+            document.getElementById('coursePrice').textContent = course.price;
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
